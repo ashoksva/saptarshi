@@ -11,24 +11,13 @@ from pydantic import BaseModel, Field
 app = FastAPI(title="SAPTARSHI stub LLM")
 
 LANES = {
-    "atri": ("first principles", "cosmology", "light", "star", "observe", "physics", "universe"),
-    "bharadvaja": ("medic", "health", "body", "heal", "fever", "pain", "sleep", "diet"),
-    "gautama": (
-        "logic",
-        "law",
-        "argue",
-        "argument",
-        "proof",
-        "legal",
-        "procedure",
-        "debate",
-        "contract",
-        "dispute",
-    ),
-    "jamadagni": ("craft", "tool", "build", "make", "discipline", "forge", "code", "engineer"),
-    "kashyapa": ("nature", "ecology", "plant", "animal", "lineage", "earth", "forest"),
-    "vashistha": ("ethic", "counsel", "teach", "advice", "calm", "moral", "dharma"),
-    "vishvamitra": ("strategy", "conflict", "war", "will", "transform", "win", "compete"),
+    "atri": ("weather", "rain", "monsoon", "forecast", "heat", "cyclone", "imd", "humidity"),
+    "bharadvaja": ("grocery", "kirana", "sabzi", "onion", "tomato", "dal", "ration", "mandi", "vegetable"),
+    "gautama": ("bank", "upi", "neft", "imps", "kyc", "loan", "savings", "account", "otp"),
+    "jamadagni": ("ecommerce", "flipkart", "amazon", "delivery", "return", "cod", "order", "parcel"),
+    "kashyapa": ("farm", "crop", "kharif", "rabi", "paddy", "soil", "irrigation", "msp", "agriculture"),
+    "vashistha": ("insurance", "premium", "claim", "irdai", "health policy", "motor insurance"),
+    "vishvamitra": ("stock", "nifty", "sensex", "nse", "bse", "share", "ipo", "sip", "equity"),
 }
 
 DISPLAY = {

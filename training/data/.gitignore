@@ -1,0 +1,4 @@
+# Private datasets — keep example.jsonl in git
+private.jsonl
+*.jsonl
+!example.jsonl

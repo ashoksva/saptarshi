@@ -19,3 +19,13 @@ export const RISHI_LABEL: Record<RishiId, string> = {
   vashistha: "Vashistha",
   vishvamitra: "Vishvamitra",
 };
+
+export const RISHI_DOMAIN: Record<RishiId, string> = {
+  atri: "Weather",
+  bharadvaja: "Grocery",
+  gautama: "Banking",
+  jamadagni: "Ecommerce",
+  kashyapa: "Agriculture",
+  vashistha: "Insurance",
+  vishvamitra: "Stocks",
+};

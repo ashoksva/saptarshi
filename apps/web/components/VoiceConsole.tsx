@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { sendChat, type ChatResponse } from "@/lib/api";
-import { RISHI_LABEL, RISHI_ORDER, type RishiId } from "@/lib/rishis";
+import { RISHI_DOMAIN, RISHI_LABEL, RISHI_ORDER, type RishiId } from "@/lib/rishis";
 
 type Phase = "idle" | "listening" | "thinking" | "speaking";
 
@@ -127,11 +127,11 @@ export function VoiceConsole() {
   return (
     <div className="console">
       <header className="masthead">
-        <p className="kicker">Seven rishis · supervisor council</p>
+        <p className="kicker">India · seven domains · supervisor</p>
         <h1>SAPTARSHI</h1>
         <p className="lede">
-          Hold the star to speak. The supervisor routes your words to one rishi,
-          then the reply is spoken back.
+          Hold the star to speak. Questions about weather, grocery prices, banking,
+          shopping, farming, insurance, or the Indian markets are routed to one rishi.
         </p>
       </header>
 
@@ -144,6 +144,7 @@ export function VoiceConsole() {
           >
             <span className="dot" />
             <span className="name">{RISHI_LABEL[id]}</span>
+            <span className="lane">{RISHI_DOMAIN[id]}</span>
           </li>
         ))}
       </ol>

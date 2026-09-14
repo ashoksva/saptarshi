@@ -2,6 +2,10 @@
 
 Voice-first web prototype: a FastAPI supervisor routes to seven rishi agents. All agents call one OpenAI-compatible Hugging Face model (or the local stub).
 
+**Session log (what we built, Runpod Day 1, billing):** [docs/work-so-far.md](docs/work-so-far.md).
+
+**Day 2 QLoRA kit:** [training/README.md](training/README.md).
+
 ## Run locally (stub model, no GPU)
 
 ```bash
