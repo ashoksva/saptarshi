@@ -1,0 +1,16 @@
+from __future__ import annotations
+
+from pydantic import BaseModel, Field
+
+
+class ChatRequest(BaseModel):
+    text: str = Field(min_length=1, max_length=8000)
+
+
+class ChatResponse(BaseModel):
+    reply: str
+    spoken: str
+    agents_used: list[str]
+    agents_display: list[str]
+    route_reason: str
+    primary: str

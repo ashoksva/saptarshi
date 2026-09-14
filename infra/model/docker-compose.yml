@@ -1,0 +1,21 @@
+# Optional GPU sidecar (run on the machine that has the NVIDIA GPU)
+
+services:
+  vllm:
+    image: vllm/vllm-openai:latest
+    ipc: host
+    ports:
+      - "8000:8000"
+    environment:
+      HUGGING_FACE_HUB_TOKEN: ${HF_TOKEN:-}
+    command: >
+      --model ${HF_MODEL_ID:-Qwen/Qwen2.5-7B-Instruct}
+      --host 0.0.0.0
+      --port 8000
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
