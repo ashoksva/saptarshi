@@ -1,4 +1,5 @@
-# Private datasets — keep example.jsonl in git
+# Private datasets — keep example.jsonl and generated Atri weather JSONL in git
 private.jsonl
 *.jsonl
 !example.jsonl
+!atri_hyderabad_2025.jsonl
